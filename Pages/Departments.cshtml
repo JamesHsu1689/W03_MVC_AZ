@@ -1,0 +1,25 @@
+﻿@page
+@model W02_EF.Pages.DepartmentsModel
+@{
+    ViewData["Title"] = "Departments";
+}
+
+<h1 class="mb-3">Departments</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>DepartmentId</th>
+            <th>DepartmentName</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var d in Model.Departments)
+    {
+        <tr>
+            <td>@d.DepartmentId</td>
+            <td>@d.DepartmentName</td>
+        </tr>
+    }
+    </tbody>
+</table>

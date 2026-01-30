@@ -1,0 +1,25 @@
+﻿@page
+@model W02_EF.Pages.EmployeeCountByDepartmentModel
+@{
+    ViewData["Title"] = "Employee Count By Department";
+}
+
+<h1 class="mb-3">Employee Count By Department</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th>Employee Count</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var row in Model.Rows)
+    {
+        <tr>
+            <td>@row.DepartmentName</td>
+            <td>@row.EmployeeCount</td>
+        </tr>
+    }
+    </tbody>
+</table>
