@@ -20,7 +20,7 @@ namespace W02_EF.Pages_Employees
 
         public IActionResult OnGet()
         {
-        ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "DepartmentId");
+        ViewData["DepartmentId"] = new SelectList(_context.Departments, "DepartmentId", "DepartmentName", "DepartmentId");
             return Page();
         }
 
